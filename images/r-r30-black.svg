@@ -1,0 +1,15 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  viewBox="0 0 100% 100%"
+  preserveAspectRatio="none"
+>
+  <g id="original" class="original">
+    <path fill="#0E2E28" d="M35.7,0h8.6c10.1,0,15.5,1.4,20.4,4s8.7,6.5,11.3,11.3c2.6,4.9,4,10.3,4,20.4v8.6 c0,10.1-1.4,15.5-4,20.4c-2.6,4.9-6.5,8.7-11.3,11.3c-4.9,2.6-10.3,4-20.4,4h-8.6c-10.1,0-15.5-1.4-20.4-4 C10.5,73.4,6.6,69.5,4,64.7S0,54.4,0,44.3v-8.6c0-10.1,1.4-15.5,4-20.4S10.5,6.6,15.3,4S25.6,0,35.7,0z"/>
+  </g>
+  <use xlink:href="#original" x="100%" y="0" transform="translate(-80,0)"/>
+  <use xlink:href="#original" x="100%" y="100%" transform="translate(-80,-80)"/>
+  <use xlink:href="#original" x="0" y="100%" transform="translate(0,-80)"/>
+
+  <rect fill="#0E2E28" stroke="none" width="100%" height="100%" rx="40"/>
+</svg>

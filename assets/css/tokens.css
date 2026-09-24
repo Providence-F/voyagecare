@@ -1,0 +1,31 @@
+/* ============================================================
+   VoyageCare 补充 tokens —— 原版变量全部由 oc-styles.css 提供
+   （oc-styles.css = opencall.ai 全量内联样式原样复用）
+   本文件只补充原版没有的项目自有变量
+   ============================================================ */
+
+:root {
+  /* 功能色（医疗红旗/紧急语义，原版无此需求） */
+  --warn:   #c98a1b;
+  --danger: #c73e3e;
+
+  /* 深底上的文字（原版 footer/call-panel 内联写死，此处沉淀为变量） */
+  --on-dark:     #f4f9f8;
+  --on-dark-dim: rgba(244, 249, 248, .62);
+
+  /* 层级 */
+  --z-header: 100;
+  --z-invite: 180;
+  --z-cookie: 190;
+  --z-orb:    200;
+}
+
+/* 动效降级（原版 EmotionOrbChat 同款处理） */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

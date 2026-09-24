@@ -1,0 +1,517 @@
+﻿﻿<!DOCTYPE html>
+<html lang="en" class="-loaded">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VoyageCare — Care worth flying for</title>
+<meta name="description" content="Top hospitals in China. Named specialists. One coordinator who handles everything — for a fraction of what you'd pay at home.">
+<link rel="icon" href="images/logo-symbol.svg">
+<!-- 原版全量样式（opencall.ai 内联样式原样复用）→ 补充变量 → 自有区块 -->
+<link rel="stylesheet" href="assets/css/oc-styles.css">
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/site.css">
+<!-- 原版字体：Archivo 400 自托管；JetBrains Mono / Lora 走 Google Fonts（原版 font stack 兜底同款） -->
+<link rel="preconnect" href="https://fonts.googleapis.cn">
+<link rel="preconnect" href="https://fonts.gstatic.cn" crossorigin>
+<link href="https://fonts.googleapis.cn/css2?family=JetBrains+Mono:wght@500;700&family=Lora:ital@1&display=swap" rel="stylesheet">
+</head>
+<body class="-OpenCall">
+<div id="OpenCall">
+
+<!-- ============ Header（原版结构） ============ -->
+<header class="header" id="nav">
+  <div class="-w">
+    <a href="index.html" class="logo" aria-label="VoyageCare home">
+      <span class="l-symbol"><span><img src="images/logo-symbol.svg" alt="VoyageCare"></span></span>
+      <span class="l-tt">VoyageCare</span>
+    </a>
+    <nav aria-label="Primary">
+      <div class="nav-items">
+        <a href="cost-explorer.html"><span class="base"><span>Costs</span></span></a>
+        <a href="journey.html"><span class="base"><span>Journey</span></span></a>
+        <a href="specialists.html"><span class="base"><span>Specialists</span></span></a>
+        <a href="stories.html"><span class="base"><span>Stories</span></span></a>
+        <a href="faq.html"><span class="base"><span>FAQ</span></span></a>
+      </div>
+    </nav>
+    <div class="button-group">
+      <a href="pre-assessment.html" class="button -p -b contact-sales"><span class="text"><span data-label="2 minutes, free"><span>Check my options</span></span></span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8-8-8z"/></svg></a>
+    </div>
+    <button class="nav__burger" id="navBurger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<div class="nav__mobile" id="navMobile">
+  <a href="cost-explorer.html">Costs</a>
+  <a href="journey.html">Journey</a>
+  <a href="specialists.html">Specialists</a>
+  <a href="stories.html">Stories</a>
+  <a href="faq.html">FAQ</a>
+  <a class="button -p -b" href="pre-assessment.html"><span class="text"><span data-label="Free"><span>Get started</span></span></span></a>
+</div>
+
+<main class="page home-page">
+
+  <!-- ============ c-welcome（原版结构：.-w 内 title+footer，orb 覆盖层在 .-w 外） ============ -->
+  <div class="ai-act-wrap">
+    <div class="ai-bg" aria-hidden="true"></div>
+    <section class="c-welcome">
+      <div class="-w">
+        <div class="title section-header -tac p-title">
+          <h1 class="-h2 section-title reveal"><span>Care worth <span class="hl-accent">flying for.</span></span></h1>
+          <span class="-p section-subtitle subtitle-constrained reveal" style="--l-delay:.12;">Top hospitals in China. Named specialists.<br>One coordinator who handles everything — for a fraction of what you'd pay at home.</span>
+        </div>
+        <!-- 患者咨询卡沿弧线飞向 orb（原版 call-flow-visualization 结构） -->
+        <div class="call-flow-visualization reveal" style="--l-delay:.2;">
+          <div class="arc-container">
+            <svg class="flow-arc" viewBox="0 0 1000 280" preserveAspectRatio="none" aria-hidden="true">
+              <path d="M40 180 Q 500 -60 960 180" stroke="rgba(14,46,40,.14)" stroke-width="1.5" fill="none" stroke-dasharray="4 6"/>
+            </svg>
+            <div class="call-items"></div>
+          </div>
+        </div>
+        <footer class="reveal" style="--l-delay:.28;">
+          <div class="scroll">
+            <div class="arrow-icon-wrapper"><svg width="14" height="18" viewBox="0 0 14 18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M7 1v14m0 0 5-5m-5 5-5 5"/></svg></div>
+            <span class="-m">Scroll down</span>
+          </div>
+        </footer>
+      </div>
+    </section>
+    <!-- orb：absolute 覆盖层，居中于整个 welcome 高度（原版 ai-action） -->
+    <div class="ai-action">
+      <div class="stick">
+        <div class="orb-sentinel" aria-hidden="true"></div>
+        <div class="wrap reveal" id="orbMount" style="--l-delay:.2;"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ c-trusted（原版 marquee 结构） ============ -->
+  <section class="c-trusted" aria-label="Built on accredited care">
+    <p class="trusted-eyebrow reveal">Built on accredited care</p>
+    <div class="marquee reveal" style="--l-delay:.1;">
+      <div class="marquee-track">
+        <!-- 概念期：文字徽标，签约后替换为授权 logo img -->
+        <span class="marquee-item">JCI-Accredited Partners</span>
+        <span class="marquee-item">Grade 3A Hospitals</span>
+        <span class="marquee-item">English · Arabic</span>
+        <span class="marquee-item">Named Specialists Only</span>
+        <span class="marquee-item">12-Month Follow-Up</span>
+        <span class="marquee-item">WhatsApp-First</span>
+        <span class="marquee-item" aria-hidden="true">JCI-Accredited Partners</span>
+        <span class="marquee-item" aria-hidden="true">Grade 3A Hospitals</span>
+        <span class="marquee-item" aria-hidden="true">English · Arabic</span>
+        <span class="marquee-item" aria-hidden="true">Named Specialists Only</span>
+        <span class="marquee-item" aria-hidden="true">12-Month Follow-Up</span>
+        <span class="marquee-item" aria-hidden="true">WhatsApp-First</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ c-catalyst（原版结构） ============ -->
+  <section id="catalyst" class="c-catalyst">
+    <div class="-w">
+      <header class="hero-block">
+        <div class="catalyst-hero reveal">
+          <div class="hero-left">
+            <h2 class="hero-headline">You know the bill. <span class="hl-accent">Let's shrink it.</span></h2>
+            <p class="hero-subtitle">The same lasers, the same implant systems, surgeons with thirty thousand cases behind them. What changes is the price — and the fact that someone finally answers your messages.</p>
+            <div class="hero-chips">
+              <span class="hero-chip"><span class="chip-tick" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12.5 5 5L20 6.5"/></svg></span>Package prices, agreed before you fly</span>
+              <span class="hero-chip"><span class="chip-tick" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12.5 5 5L20 6.5"/></svg></span>A human replies within 48 hours</span>
+            </div>
+          </div>
+          <aside class="hero-rail">
+            <div class="rail-head"><span class="rail-kicker">What changes for you</span></div>
+            <div class="hero-metric">
+              <span class="metric-num">70%</span>
+              <div class="metric-body">
+                <div class="metric-head"><span class="metric-name">Typical saving</span><span class="metric-idx">01</span></div>
+                <p class="metric-caption">Versus US list prices, across the six packages we run most.</p>
+              </div>
+            </div>
+            <div class="hero-metric">
+              <span class="metric-num">48h</span>
+              <div class="metric-body">
+                <div class="metric-head"><span class="metric-name">Quote turnaround</span><span class="metric-idx">02</span></div>
+                <p class="metric-caption">A coordinator sends an exact number, not an estimate range.</p>
+              </div>
+            </div>
+            <div class="hero-metric">
+              <span class="metric-num">12mo</span>
+              <div class="metric-body">
+                <div class="metric-head"><span class="metric-name">Follow-up window</span><span class="metric-idx">03</span></div>
+                <p class="metric-caption">Your coordinator stays reachable long after you fly home.</p>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </header>
+
+      <!-- system-grid：左 stages / 右产品预览窗（原版结构） -->
+      <div class="system-grid">
+        <aside class="system-copy mask-r30 reveal">
+          <span class="system-kicker">How it actually works</span>
+          <h3 class="system-title">One person owns your trip</h3>
+          <p class="system-subtitle">No call centers, no ticket numbers. You get a coordinator who knows your case and stays with it — before, during, and after.</p>
+          <div class="system-stages">
+            <div class="system-stage">
+              <span class="stage-index">01</span>
+              <div class="stage-body">
+                <span class="stage-label">Tell us what's going on</span>
+                <p>Two minutes with the guide. You get directions and real prices, not a lecture.</p>
+              </div>
+            </div>
+            <div class="system-stage">
+              <span class="stage-index">02</span>
+              <div class="stage-body">
+                <span class="stage-label">A doctor reviews your case</span>
+                <p>A named specialist signs off on the plan before anything is booked.</p>
+              </div>
+            </div>
+            <div class="system-stage">
+              <span class="stage-index">03</span>
+              <div class="stage-body">
+                <span class="stage-label">Fly, get treated, heal</span>
+                <p>Airport pickup, translated records, and someone at your side for every appointment.</p>
+              </div>
+            </div>
+          </div>
+        </aside>
+        <div class="system-preview reveal" style="--l-delay:.15;">
+          <figure class="screen system-screen">
+            <div class="sc-lift">
+              <div class="sc-window mask-r30">
+                <div class="sc-chrome" aria-hidden="true">
+                  <span class="sc-dots"><i></i><i></i><i></i></span>
+                  <span class="sc-label">Your trip · live view</span>
+                </div>
+                <div class="sc-view">
+                  <p class="sc-mock-title">Tuesday, arrival day</p>
+                  <p class="sc-mock-sub">Shanghai · coordinator: Mei</p>
+                  <div class="sc-kpis">
+                    <div class="sc-kpi"><b>2</b><span>appointments today</span></div>
+                    <div class="sc-kpi"><b>1</b><span>records translated</span></div>
+                    <div class="sc-kpi"><b>0</b><span>things for you to do</span></div>
+                  </div>
+                  <div class="sc-rows">
+                    <div class="sc-row"><span>Airport pickup, arrivals hall B</span><span class="p-badge p-badge--ok">Done</span></div>
+                    <div class="sc-row"><span>Pre-op consult, Dr. Li Wei</span><span class="p-badge p-badge--ok">Done</span></div>
+                    <div class="sc-row"><span>Halal dinner arranged at hotel</span><span class="p-badge p-badge--ok">Done</span></div>
+                    <div class="sc-row"><span>Tomorrow: procedure, 9:00 AM</span><span class="p-badge p-badge--warn">Queued</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ demo-experience（原版 Demo 组件结构） ============ -->
+  <section class="demo-experience">
+    <div class="-w">
+      <div class="demo-shell">
+        <aside class="specialty-panel reveal">
+          <header class="panel-header">
+            <span class="eyebrow">Try It Now</span>
+            <p class="panel-copy">Two minutes. Real prices at the end.</p>
+          </header>
+          <p class="-m">The guide listens, asks a few questions, and hands you a plan card with an actual price range from our partner hospitals. A person takes it from there.</p>
+          <div class="specialty-list">
+            <a class="specialty-item" href="pre-assessment.html">I have a symptom<span class="arr">&rarr;</span></a>
+            <a class="specialty-item" href="pre-assessment.html">I know what I want<span class="arr">&rarr;</span></a>
+            <a class="specialty-item" href="cost-explorer.html">Just show me prices<span class="arr">&rarr;</span></a>
+          </div>
+        </aside>
+        <div class="call-panel reveal" style="--l-delay:.12;">
+          <div class="call-heading">
+            <div class="heading-left">
+              <span class="eyebrow">A real conversation</span>
+              <h3>The guide, doing its job</h3>
+            </div>
+            <div class="heading-right">
+              <div class="status-indicator -idle" aria-hidden="true"><span></span><span></span><span></span></div>
+            </div>
+          </div>
+          <div class="call-body">
+            <div class="transcript">
+              <div class="t-line t-line--user"><div class="bubble">My lower back has been hurting for months. Painkillers barely touch it.</div></div>
+              <div class="t-line"><div class="bubble">Got it. That points to a rehab program — high confidence. Two weeks of physician-led therapy runs $1,200–$2,500, all in.</div></div>
+              <div class="t-line t-line--user"><div class="bubble">That includes the hospital?</div></div>
+              <div class="t-line"><div class="bubble">Everything medical. Flights and hotel are separate — I put both on your plan card so you can see the whole trip before deciding anything.</div></div>
+            </div>
+          </div>
+          <div class="call-foot">
+            <span class="note">DIRECTIONS, NOT DIAGNOSES</span>
+            <a href="pre-assessment.html" class="button -p -b"><span class="text"><span data-label="Free"><span>Start yours</span></span></span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8-8-8z"/></svg></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Cost Explorer 交互计算器（Check；三幕紧凑版） ============ -->
+  <section class="demo-experience" id="check" style="padding-top: 0;" data-ce="mini">
+    <div class="-w">
+      <div class="demo-shell">
+        <aside class="specialty-panel reveal">
+          <header class="panel-header">
+            <span class="eyebrow">01 &middot; Check</span>
+            <p class="panel-copy">Real prices, before you fly.</p>
+          </header>
+          <p class="-m">Every number here is a package price from a partner hospital — the same list our coordinators quote from.</p>
+          <div style="display:flex; flex-wrap:wrap; gap:.5rem; margin-top:1.5rem;" data-ce-chips></div>
+          <p class="form-note">2026 package list prices. Final quote after specialist review. Not a diagnosis.</p>
+          <div class="specialty-list">
+            <a class="specialty-item" href="cost-explorer.html">Open the full cost explorer<span class="arr">&rarr;</span></a>
+          </div>
+        </aside>
+        <div class="call-panel reveal" style="--l-delay:.12;">
+          <div class="call-heading">
+            <div class="heading-left">
+              <span class="eyebrow">02 &middot; Compare</span>
+              <h3 data-ce-name>Pick a treatment</h3>
+            </div>
+            <div class="heading-right">
+              <div class="status-indicator -idle" aria-hidden="true"><span></span><span></span><span></span></div>
+            </div>
+          </div>
+          <div class="ce-mini">
+            <div class="ce-price ce-price--us">
+              <span class="ce-label">US typical</span>
+              <b class="mono" data-ce-us>$0–$0</b>
+            </div>
+            <svg class="ce-plane" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 12h16m0 0-5-5m5 5-5 5"/></svg>
+            <div class="ce-price ce-price--cn" style="text-align:right;">
+              <span class="ce-label">China package</span>
+              <b class="mono" data-ce-cn>$0–$0</b>
+              <span class="bpass__save" data-ce-save style="margin:.5rem 0 0; display:inline-block;">SAVE ≈0%</span>
+            </div>
+          </div>
+          <div data-ce-bpass></div>
+          <div class="call-foot">
+            <span class="note">NOT A DIAGNOSIS</span>
+            <a href="pre-assessment.html" class="button -p -b"><span class="text"><span data-label="Free &middot; 48h reply"><span>Get my exact quote</span></span></span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8-8-8z"/></svg></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ c-cards（原版结构） ============ -->
+  <section class="c-cards" style="--card-count:4;">
+    <div class="-w">
+      <div class="title section-header section-header-left reveal">
+        <span class="-h3 section-title">What a coordinator actually does</span>
+        <p class="section-subtitle">The unglamorous parts of medical travel, handled by one accountable person.</p>
+      </div>
+      <div class="list">
+        <div class="card-wrap reveal">
+          <div class="card card-surface card-surface--borderless card-surface--no-shadow">
+            <span class="-h5 -m-h5">Answers like a person</span>
+            <figure><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#0e2e28" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 13a8 8 0 0 1 16 0"/><rect x="2.5" y="13" width="4.5" height="6.5" rx="2"/><rect x="17" y="13" width="4.5" height="6.5" rx="2"/><path d="M19 19.5a3 3 0 0 1-3 2.5h-2"/></svg></figure>
+            <p class="-m">WhatsApp or email, your language, usually within the hour. No ticket numbers, no "your call is important to us."</p>
+          </div>
+        </div>
+        <div class="card-wrap reveal" style="--l-delay:.1;">
+          <div class="card card-surface card-surface--borderless card-surface--no-shadow">
+            <span class="-h5 -m-h5">Walks in with you</span>
+            <figure><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#0e2e28" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21V5a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v16"/><path d="M9 21v-4h6v4M8 7h.01M12 7h.01M16 7h.01M8 11h.01M12 11h.01M16 11h.01"/></svg></figure>
+            <p class="-m">Every appointment, your coordinator is physically there. Forms, translation, the thing you forgot to ask — done.</p>
+          </div>
+        </div>
+        <div class="card-wrap reveal" style="--l-delay:.2;">
+          <div class="card card-surface card-surface--borderless card-surface--no-shadow">
+            <span class="-h5 -m-h5">Translates everything</span>
+            <figure><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#0e2e28" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8Z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></svg></figure>
+            <p class="-m">Records, prescriptions, discharge notes — in English your home doctor can actually use.</p>
+          </div>
+        </div>
+        <div class="card-wrap reveal" style="--l-delay:.3;">
+          <div class="card card-surface card-surface--borderless card-surface--no-shadow">
+            <span class="-h5 -m-h5">Stays after you land</span>
+            <figure><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#0e2e28" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 6v13M3 12h13a4 4 0 0 1 4 4v3M3 16h17"/><circle cx="7" cy="9" r="1.6"/></svg></figure>
+            <p class="-m">A scheduled video follow-up with your treating doctor, and a WhatsApp line that stays open for a year.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ c-benefits（原版结构） ============ -->
+  <section class="c-benefits">
+    <div class="-w mask-r40">
+      <span class="-h3 -m-h4 section-title reveal">Why this works</span>
+      <div class="ul">
+        <div class="li reveal"><span class="index" aria-hidden="true">01</span><div class="tt"><span class="-h5">Real prices, not estimates</span><p class="-p">Every number you see is a package price from a partner hospital. The guide can't invent one — it reads from the same list you do.</p></div></div>
+        <div class="li reveal"><span class="index" aria-hidden="true">02</span><div class="tt"><span class="-h5">A doctor with a name</span><p class="-p">Your plan card names the specialist who reviews your case. Their hospital, their title, their focus — before you pay anything.</p></div></div>
+        <div class="li reveal"><span class="index" aria-hidden="true">03</span><div class="tt"><span class="-h5">Someone in your language</span><p class="-p">English as standard, Arabic on request. Halal meals, prayer arrangements, a female coordinator if you prefer — said once, remembered.</p></div></div>
+        <div class="li reveal"><span class="index" aria-hidden="true">04</span><div class="tt"><span class="-h5">Honest about limits</span><p class="-p">The guide gives directions with confidence levels, never a diagnosis. Red-flag symptoms get sent to emergency guidance immediately.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ c-workflows（原版结构，内容为治疗项目） ============ -->
+  <section class="c-workflows" style="margin-top: var(--space-section-md);">
+    <div class="-w">
+      <div class="section-header section-header-left reveal">
+        <span class="-h3 section-title">Six reasons people fly</span>
+        <p class="section-subtitle">Package prices from partner hospitals, next to what you'd typically pay in the US. Tap one for the full breakdown.</p>
+      </div>
+      <div class="integrations-section reveal">
+        <div class="integration-grid" data-render="treatments"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Stories ============ -->
+  <section class="c-cards" id="stories" style="--card-count:4;">
+    <div class="-w">
+      <div class="title section-header section-header-left reveal">
+        <span class="-h3 section-title">They flew home fine</span>
+        <p class="section-subtitle">From our pilot program. <span class="sample-tag">Pilot stories — consented interviews replace these</span></p>
+      </div>
+      <div class="storygrid" data-render="stories"></div>
+    </div>
+  </section>
+
+  <!-- ============ 兜底联系表单（无 AI 路径） ============ -->
+  <section class="c-cards" id="contact">
+    <div class="-w">
+      <div class="title section-header section-header-left reveal">
+        <span class="-h3 section-title">Prefer to skip the AI?</span>
+        <p class="section-subtitle">Leave your details — a coordinator replies within 48 hours. Free, no commitment.</p>
+      </div>
+      <div class="form-cta card-surface mask-r30 reveal" style="display:block; max-width:560px; padding:2rem 2.25rem;">
+        <form class="leadform" data-lead novalidate style="margin-top:0;">
+          <div class="field">
+            <label for="lfName">Your name</label>
+            <input id="lfName" name="name" required placeholder="e.g. Marcus Thompson">
+          </div>
+          <div class="field">
+            <label for="lfContact">WhatsApp number or email</label>
+            <input id="lfContact" name="contact" required placeholder="+1 … or you@email.com">
+          </div>
+          <div class="field">
+            <label for="lfCare">What care are you considering?</label>
+            <select id="lfCare" name="care">
+              <option value="">Not sure yet</option>
+              <option>Health Checkup</option>
+              <option>Vision Correction</option>
+              <option>Dental Care</option>
+              <option>Genetic Screening</option>
+              <option>Aesthetic Care</option>
+              <option>TCM &amp; Rehab</option>
+            </select>
+          </div>
+          <button class="button -p -b" type="submit"><span class="text"><span data-label="48h reply"><span>Request a callback</span></span></span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8-8-8z"/></svg></button>
+          <p class="form-note">Your details go to one coordinator, nowhere else.</p>
+        </form>
+      </div>
+      <div class="form-ok" hidden>
+        <b>Received — thank you.</b><br>A coordinator will reach out within 48 hours.
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ c-learn（原版消息弹窗区结构） ============ -->
+  <section class="c-learn">
+    <div class="-w">
+      <div class="post mask-r40 reveal">
+        <div class="bg" data-v-bg><div><span></span><span></span><span></span></div></div>
+        <div class="receptionist-bubble">
+          <div class="receptionist-avatar"><div class="face-tracker"></div></div>
+          <div class="receptionist-message">
+            <div class="bubble-surface mask-r30">
+              <span class="message-text">
+                <span class="message-title">&ldquo;You're booked for Thursday, 9 AM. I'll meet you at arrivals and walk in with you.&rdquo;</span>
+                <span class="message-subtitle">— Mei, your coordinator in Shanghai</span>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="phone">
+          <div class="messages-container">
+            <div class="messages-wrapper">
+              <div class="pmsg pmsg--in">Landed! Just got my bags.</div>
+              <div class="pmsg pmsg--out">Welcome to Shanghai — I'm at arrivals hall B, wearing a green badge.</div>
+              <div class="pmsg pmsg--out">Halal dinner is arranged at your hotel. Tomorrow's consult with Dr. Li is at 9.</div>
+              <div class="pmsg pmsg--in">You think of everything. Thank you.</div>
+              <div class="pmsg pmsg--out">That's the job. Get some rest — big day tomorrow.<span class="pmsg__meta">21:42 · WHATSAPP</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ c-closing-cta（原版结构） ============ -->
+  <section class="c-closing-cta">
+    <div class="-w">
+      <div class="closing-band mask-r40 reveal">
+        <div class="orb-dock" aria-hidden="true"></div>
+        <div class="closing-copy">
+          <h2 class="closing-title">The flight is long. <span class="hl-accent">The bill isn't.</span></h2>
+          <div class="closing-actions">
+            <span class="cta-capture"><a href="pre-assessment.html" class="button -p -b"><span class="text"><span data-label="2 minutes, free"><span>Check my options</span></span></span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8-8-8z"/></svg></a></span>
+            <a href="journey.html" class="secondary-link">or see how the trip works <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m0 0-6-6m6 6-6 6"/></svg></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ c-footer（原版结构） ============ -->
+<footer class="c-footer">
+  <div class="-w">
+    <div class="bg"><span></span><span></span><span></span></div>
+    <div class="top">
+      <a href="index.html" class="logo">
+        <span class="l-symbol"><span><img src="images/logo-symbol.svg" alt="VoyageCare"></span></span>
+        <span class="l-tt">VoyageCare</span>
+      </a>
+      <nav>
+        <div class="col">
+          <span class="-h5">Explore</span>
+          <a href="cost-explorer.html"><span class="base">Cost explorer</span></a>
+          <a href="journey.html"><span class="base">Your journey</span></a>
+          <a href="specialists.html"><span class="base">Specialists</span></a>
+          <a href="stories.html"><span class="base">Stories</span></a>
+        </div>
+        <div class="col">
+          <span class="-h5">Care</span>
+          <a href="cost-explorer.html#checkup"><span class="base">Health checkup</span></a>
+          <a href="cost-explorer.html#lasik"><span class="base">Vision correction</span></a>
+          <a href="cost-explorer.html#dental"><span class="base">Dental care</span></a>
+          <a href="cost-explorer.html#aesthetic"><span class="base">Aesthetic care</span></a>
+        </div>
+        <div class="col">
+          <span class="-h5">Support</span>
+          <a href="faq.html"><span class="base">FAQ</span></a>
+          <a href="pre-assessment.html"><span class="base">Pre-assessment</span></a>
+          <!-- 占位联系方式，上线前替换为真实渠道 -->
+          <a href="mailto:hello@voyagecare.example"><span class="base">hello@voyagecare.example</span></a>
+        </div>
+      </nav>
+    </div>
+    <div class="bot">
+      <span class="copy">&copy; 2026 VoyageCare · Shanghai · Dubai</span>
+    </div>
+    <p class="disclaimer">VoyageCare arranges medical travel. We don't practice medicine. The guide's assessment is organizational guidance, not a diagnosis — every plan is reviewed by a licensed specialist at an accredited partner hospital before you book. Prices are 2026 package list prices; your coordinator confirms the final quote.</p>
+  </div>
+</footer>
+
+</div><!-- /#OpenCall -->
+
+<script src="assets/js/data.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/cost-explorer.js"></script>
+<script src="assets/js/call-flow.js"></script>
+<script src="assets/js/emotion-rig.js"></script>
+<script src="assets/js/orb.js"></script>
+</body>
+</html>

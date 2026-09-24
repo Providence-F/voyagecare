@@ -1,0 +1,76 @@
+﻿﻿<!DOCTYPE html>
+<html lang="en" class="-loaded">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Check your options — VoyageCare</title>
+<meta name="description" content="Two minutes with the guide. Directions with confidence levels and real package prices — then a person takes over.">
+<link rel="icon" href="images/logo-symbol.svg">
+<link rel="stylesheet" href="assets/css/oc-styles.css">
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/site.css">
+<link rel="preconnect" href="https://fonts.googleapis.cn">
+<link rel="preconnect" href="https://fonts.gstatic.cn" crossorigin>
+<link href="https://fonts.googleapis.cn/css2?family=JetBrains+Mono:wght@500;700&family=Lora:ital@1&display=swap" rel="stylesheet">
+</head>
+<body class="-OpenCall" data-no-invite>
+<div id="OpenCall">
+
+<header class="header" id="nav">
+  <div class="-w">
+    <a href="index.html" class="logo" aria-label="VoyageCare home">
+      <span class="l-symbol"><span><img src="images/logo-symbol.svg" alt="VoyageCare"></span></span>
+      <span class="l-tt">VoyageCare</span>
+    </a>
+    <nav aria-label="Primary">
+      <div class="nav-items">
+        <a href="cost-explorer.html"><span class="base"><span>Costs</span></span></a>
+        <a href="journey.html"><span class="base"><span>Journey</span></span></a>
+        <a href="specialists.html"><span class="base"><span>Specialists</span></span></a>
+        <a href="stories.html"><span class="base"><span>Stories</span></span></a>
+        <a href="faq.html"><span class="base"><span>FAQ</span></span></a>
+      </div>
+    </nav>
+    <button class="nav__burger" id="navBurger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<div class="nav__mobile" id="navMobile">
+  <a href="cost-explorer.html">Costs</a>
+  <a href="journey.html">Journey</a>
+  <a href="specialists.html">Specialists</a>
+  <a href="stories.html">Stories</a>
+  <a href="faq.html">FAQ</a>
+</div>
+
+<!-- Wizard：所有屏由 wizard.js 渲染进 #wizard-root -->
+<main class="page wizard">
+  <div class="-w">
+    <div class="wizard__shell">
+      <div class="wizard__progress" aria-hidden="true">
+        <div class="wizard__progress-bar" id="wzBar"><i></i></div>
+        <span class="wizard__progress-text" id="wzText"></span>
+      </div>
+      <div id="wizard-root"></div>
+    </div>
+  </div>
+</main>
+
+<footer class="c-footer">
+  <div class="-w">
+    <div style="display:flex; justify-content:space-between; gap:1rem; flex-wrap:wrap; font-family:var(--f-mono); font-size:.78rem;">
+      <span>&copy; 2026 VoyageCare</span>
+      <span>Not a diagnosis — <a href="faq.html" style="text-decoration:underline;">read the FAQ</a></span>
+    </div>
+    <p class="disclaimer">The guide offers organizational guidance only. Medical care is delivered by licensed specialists at accredited partner hospitals.</p>
+  </div>
+</footer>
+
+</div><!-- /#OpenCall -->
+
+<script src="assets/js/data.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/wizard.js"></script>
+<script src="assets/js/emotion-rig.js"></script>
+<script src="assets/js/orb.js"></script>
+</body>
+</html>

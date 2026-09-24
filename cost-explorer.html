@@ -1,0 +1,190 @@
+﻿﻿<!DOCTYPE html>
+<html lang="en" class="-loaded">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cost explorer — VoyageCare</title>
+<meta name="description" content="Package prices from partner hospitals in China, next to typical US list prices. Pick a treatment, see the whole trip.">
+<link rel="icon" href="images/logo-symbol.svg">
+<link rel="stylesheet" href="assets/css/oc-styles.css">
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/site.css">
+<style>
+  /* 本页内容留白：.-w 原版仅 1rem 边距全宽，大屏过于局促；限宽居中（footer 在 main 外不受影响） */
+  .page .-w { max-width: 1120px; margin-inline: auto; }
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.cn">
+<link rel="preconnect" href="https://fonts.gstatic.cn" crossorigin>
+<link href="https://fonts.googleapis.cn/css2?family=JetBrains+Mono:wght@500;700&family=Lora:ital@1&display=swap" rel="stylesheet">
+</head>
+<body class="-OpenCall">
+<div id="OpenCall">
+
+<header class="header" id="nav">
+  <div class="-w">
+    <a href="index.html" class="logo" aria-label="VoyageCare home">
+      <span class="l-symbol"><span><img src="images/logo-symbol.svg" alt="VoyageCare"></span></span>
+      <span class="l-tt">VoyageCare</span>
+    </a>
+    <nav aria-label="Primary">
+      <div class="nav-items">
+        <a href="cost-explorer.html"><span class="base"><span>Costs</span></span></a>
+        <a href="journey.html"><span class="base"><span>Journey</span></span></a>
+        <a href="specialists.html"><span class="base"><span>Specialists</span></span></a>
+        <a href="stories.html"><span class="base"><span>Stories</span></span></a>
+        <a href="faq.html"><span class="base"><span>FAQ</span></span></a>
+      </div>
+    </nav>
+    <div class="button-group">
+      <a href="pre-assessment.html" class="button -p -b contact-sales"><span class="text"><span data-label="2 minutes, free"><span>Check my options</span></span></span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8-8-8z"/></svg></a>
+    </div>
+    <button class="nav__burger" id="navBurger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<div class="nav__mobile" id="navMobile">
+  <a href="cost-explorer.html">Costs</a>
+  <a href="journey.html">Journey</a>
+  <a href="specialists.html">Specialists</a>
+  <a href="stories.html">Stories</a>
+  <a href="faq.html">FAQ</a>
+</div>
+
+<main class="page">
+
+  <header class="pagehead">
+    <div class="-w">
+      <span class="eyebrow reveal">Cost explorer</span>
+      <h1 class="reveal" style="--l-delay:.06;">Numbers first. <span class="hl-accent">Decisions after.</span></h1>
+      <p class="lead reveal" style="--l-delay:.12;">Every price here is a package price from a partner hospital — the same list our coordinators quote from. Pick a treatment.</p>
+    </div>
+  </header>
+
+  <!-- ============ Cost Explorer v2：三幕结构 Pick → Compare → Plan ============ -->
+  <section data-ce="full" style="padding: 0 0 var(--space-section-md);">
+    <!-- S1 选择 -->
+    <div class="ce-pick reveal" style="max-width:1120px; margin-inline:auto;">
+      <span class="eyebrow" style="justify-content:center;">01 &middot; Pick a treatment</span>
+      <h2 class="-h3">What are you coming for?</h2>
+      <div class="quick-filters" data-ce-chips style="justify-content:center; margin-top:2rem;"></div>
+    </div>
+
+    <!-- S2 对比带（全宽深色） -->
+    <div class="ce-compare mask-r40 reveal" style="--l-delay:.1; margin-top:3rem;">
+      <div class="-w">
+        <div class="ce-compare__grid">
+          <div class="ce-price ce-price--us">
+            <span class="ce-label">US typical</span>
+            <b class="mono" data-ce-us>$0–$0</b>
+          </div>
+          <svg class="ce-plane" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 12h16m0 0-5-5m5 5-5 5"/><path d="M5.5 8.5h-2L2 12l1.5 3.5h2M18.5 8.5h2L22 12l-1.5 3.5h-2"/></svg>
+          <div class="ce-price ce-price--cn">
+            <span class="ce-label">China package</span>
+            <b class="mono" data-ce-cn>$0–$0</b>
+            <span class="bpass__save" data-ce-save style="margin: .75rem auto 0; display:inline-block;">SAVE ≈0%</span>
+          </div>
+        </div>
+        <p class="ce-note">YOU PAY THE HOSPITAL DIRECTLY — WE NEVER MARK UP MEDICAL BILLS</p>
+      </div>
+    </div>
+
+    <!-- S3 方案区（双栏） -->
+    <div class="ce-plan" style="max-width:1120px; margin-inline:auto;">
+      <div class="reveal">
+        <div data-ce-bpass></div>
+        <div class="summary" style="margin-top: 1.5rem;">
+          <h4>What's included</h4>
+          <ul style="list-style:none;" class="ce-checklist" data-ce-includes></ul>
+        </div>
+      </div>
+      <aside class="reveal" style="--l-delay:.12;">
+        <div class="summary">
+          <h4>Your specialist <span class="sample-tag" style="margin-left:auto;">Sample profile</span></h4>
+          <div data-ce-doctor></div>
+        </div>
+        <div class="summary" style="margin-top: 1.25rem;">
+          <h4>Time on the ground</h4>
+          <div class="summary__row"><span class="summary__k">Recommended stay</span><span class="summary__v" data-ce-stay>—</span></div>
+          <div class="summary__row"><span class="summary__k">Recovery</span><span class="summary__v" data-ce-recovery>—</span></div>
+        </div>
+        <div style="margin-top: 1.75rem; display:grid; gap:.75rem;">
+          <a class="button -p -b" href="pre-assessment.html"><span class="text"><span data-label="Free &middot; 48h reply"><span>Get my exact quote</span></span></span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8-8-8z"/></svg></a>
+          <a class="button -p -b" href="journey.html"><span class="text"><span data-label="Door to door"><span>How the trip works</span></span></span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8-8-8z"/></svg></a>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="c-workflows" style="padding-top: 0;">
+    <div class="-w">
+      <div class="title section-header section-header-left reveal">
+        <span class="-h3 section-title">All six, side by side</span>
+      </div>
+      <div class="integrations-section reveal">
+        <div class="integration-grid" data-render="treatments"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="c-closing-cta">
+    <div class="-w">
+      <div class="closing-band mask-r40 reveal">
+        <div class="orb-dock" aria-hidden="true"></div>
+        <div class="closing-copy">
+          <h2 class="closing-title">Know your price <span class="hl-accent">before you pack.</span></h2>
+          <div class="closing-actions">
+            <span class="cta-capture"><a href="pre-assessment.html" class="button -p -b"><span class="text"><span data-label="2 minutes, free"><span>Check my options</span></span></span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8-8-8z"/></svg></a></span>
+            <a href="journey.html" class="secondary-link">or see how the trip works <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m0 0-6-6m6 6-6 6"/></svg></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="c-footer">
+  <div class="-w">
+    <div class="bg"><span></span><span></span><span></span></div>
+    <div class="top">
+      <a href="index.html" class="logo">
+        <span class="l-symbol"><span><img src="images/logo-symbol.svg" alt="VoyageCare"></span></span>
+        <span class="l-tt">VoyageCare</span>
+      </a>
+      <nav>
+        <div class="col">
+          <span class="-h5">Explore</span>
+          <a href="cost-explorer.html"><span class="base">Cost explorer</span></a>
+          <a href="journey.html"><span class="base">Your journey</span></a>
+          <a href="specialists.html"><span class="base">Specialists</span></a>
+          <a href="stories.html"><span class="base">Stories</span></a>
+        </div>
+        <div class="col">
+          <span class="-h5">Care</span>
+          <a href="cost-explorer.html#checkup"><span class="base">Health checkup</span></a>
+          <a href="cost-explorer.html#lasik"><span class="base">Vision correction</span></a>
+          <a href="cost-explorer.html#dental"><span class="base">Dental care</span></a>
+          <a href="cost-explorer.html#aesthetic"><span class="base">Aesthetic care</span></a>
+        </div>
+        <div class="col">
+          <span class="-h5">Support</span>
+          <a href="faq.html"><span class="base">FAQ</span></a>
+          <a href="pre-assessment.html"><span class="base">Pre-assessment</span></a>
+          <a href="mailto:hello@voyagecare.example"><span class="base">hello@voyagecare.example</span></a>
+        </div>
+      </nav>
+    </div>
+    <div class="bot">
+      <span class="copy">&copy; 2026 VoyageCare · Shanghai · Dubai</span>
+    </div>
+    <p class="disclaimer">Prices are 2026 package list prices from partner hospitals. Your coordinator confirms the final quote before you book. You always pay the hospital directly.</p>
+  </div>
+</footer>
+
+</div><!-- /#OpenCall -->
+
+<script src="assets/js/data.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/cost-explorer.js"></script>
+<script src="assets/js/emotion-rig.js"></script>
+<script src="assets/js/orb.js"></script>
+</body>
+</html>
